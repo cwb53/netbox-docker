@@ -5,18 +5,18 @@ services:
     - 8050:8080
     volumes:
     - /mnt/backup/netbox:/etc/netbox/config:z,ro
-    - /mnt/backup/netbox/netbox-media-files:/opt/netbox/netbox/media:z,rw
-    - /mnt/backup/netbox/netbox-reports-files:/opt/netbox/netbox/reports:z,rw
-    - /mnt/backup/netbox/netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
+    - netbox-media-files:/opt/netbox/netbox/media:z,rw
+    - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
+    - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
   netbox-worker:
     volumes:
     - /mnt/backup/netbox:/etc/netbox/config:z,ro
-    - /mnt/backup/netbox/netbox-media-files:/opt/netbox/netbox/media:z,rw
-    - /mnt/backup/netbox/netbox-reports-files:/opt/netbox/netbox/reports:z,rw
-    - /mnt/backup/netbox/netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
+    - netbox-media-files:/opt/netbox/netbox/media:z,rw
+    - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
+    - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
   netbox-housekeeping:
     volumes:
     - /mnt/backup/netbox:/etc/netbox/config:z,ro
-    - /mnt/backup/netbox/netbox-media-files:/opt/netbox/netbox/media:z,rw
-    - /mnt/backup/netbox/netbox-reports-files:/opt/netbox/netbox/reports:z,rw
-    - /mnt/backup/netbox/netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
+    - netbox-media-files:/opt/netbox/netbox/media:z,rw
+    - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
+    - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
